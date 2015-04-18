@@ -10,7 +10,7 @@ error_reporting(E_ERROR);
 define('SERVER', 'localhost');
 define('USER', 'root');
 define('PASS', 'xvalencia');
-define('BBDD','encuestas');
+define('BBDD','agenda');
 
 
 GestorBD::connectar(SERVER, USER, PASS, BBDD);

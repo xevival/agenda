@@ -17,7 +17,7 @@ class Login {
 
         $html.= '<form class="form-horizontal" action="login.php?do=doLogin" method="POST">
                     <fieldset>
-                      <legend>Acceso a Encuestas</legend>
+                      <legend>Acceso a Agenda</legend>
                       <div class="form-group">
                         <label for="inputEmail" class="col-lg-2 control-label">DNI</label>
                         <div class="col-lg-10">
@@ -37,8 +37,7 @@ class Login {
                         </div>
                       </div>
                     </fieldset>
-                  </form>
-                  <a href="alta_usurio.php" class="btn btn-link">Eres Nuevo?</a><a href="alta_usurio.php" class="btn btn-link">Has olvidado tu contraseña?</a>';
+                  </form>';
         $html.='</div>';
         echo $html;
     }
