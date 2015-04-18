@@ -20,9 +20,24 @@ $do = $_REQUEST['do'];
             switch ($do) {
 
                 case 'doLogin':
+                	
+                	$user = Utils::filtraString($_REQUEST['user']);
+                	$pass = Utils::filtraString($_REQUEST['pass']);
+                	
+                	$user    = Login::iniciarSession($user, $pass);
+                	$user_ok = GestorBD::totalSQL($user);
+                	
+                	if ( $user_ok > -1) {
+						$_SESSION['USERID'] = $user[0]['id_usuario'];
+					} else {
+						echo "<script type=\"text/javascript\">location.href=\"login.php?error=1\";</script>";
+					}
+                	
                     break;
                 default :
-                    Login::mostrarFormulario();
+                	
+                	$error = ($_REQUEST['error']) ? 1 : '';
+                    Login::mostrarFormulario($error);
                    
                     break;
             }
