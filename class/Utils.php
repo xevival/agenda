@@ -25,6 +25,28 @@ class Utils {
     	return  $entero = filter_var($entero,FILTER_SANITIZE_NUMBER_INT);
     }
     
+    public static function girarFecha($fecha,$accion){
+    	
+    	switch ($accion){
+    		
+    		case 'guardar':
+    			$fecha = explode("/", $fecha);
+    			$fecha = $fecha[2]."/".$fecha[1]."/".$fecha[0];
+    			break;
+    		
+    		case 'ver':
+    			$fecha = explode("/", $fecha);
+    			$fecha = $fecha[0]."/".$fecha[1]."/".$fecha[2];
+    			break;
+
+    		default:
+    			break;
+    		
+    	}
+
+    	return $fecha;
+    	
+    }
     
 
 }
