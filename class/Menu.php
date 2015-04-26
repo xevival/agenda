@@ -17,25 +17,14 @@ class Menu {
                       </div>
                       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                          <li><a href="contactos.php">Contactos</a></li>
-                          <li><a href="#">Buscar</a></li>
-        				<li><a href="#">Emails</a></li>
+                        	<li><a href="contactos.php">Contactos</a></li>
+                        	<li><a href="buscar.php">Buscar</a></li>
+        					<li><a href="email.php">Emails</a></li>
+        					<li><a href="accesos.php">Ver accesos</a></li>
                           
-                          <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                            <ul class="dropdown-menu navbar-right" role="menu">
-                              <li><a href="#">Action</a></li>
-                              <li><a href="#">Another action</a></li>
-                              <li><a href="#">Something else here</a></li>
-                              <li class="divider"></li>
-                              <li><a href="#">Separated link</a></li>
-                              <li class="divider"></li>
-                              <li><a href="#">One more separated link</a></li>
-                            </ul>
-                          </li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                          <li><a href="#">Nombre Usuario</a></li>
+                          <li><a href="logout.php">Salir</a></li>
                         </ul>
                       </div>
                     </div>
@@ -43,8 +32,22 @@ class Menu {
         
         echo $html;
     }
-
     
+    public static function mostrarPie(){
+    	
+    	
+    	$html .= '<div class="pie">
+				      <div>
+				        <p class="text-muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
+				      </div>
+				    </div>';
+    	
+    	
+    	echo $html;
+    	
+    }
+
+   
     
 }
 
