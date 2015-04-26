@@ -15,6 +15,8 @@ define('BBDD','agenda');
 
 GestorBD::connectar(SERVER, USER, PASS, BBDD);
 
+date_default_timezone_set('Europe/Madrid');
+
 
 
 
