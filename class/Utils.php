@@ -48,5 +48,14 @@ class Utils {
     	
     }
     
+    public static function enviarMail($para,$asunto,$texto){
+    	
+    }
+    
+    public static function getRealIP() {
+
+    	return $_SERVER['REMOTE_ADDR'];
+    }
+    
 
 }
