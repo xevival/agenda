@@ -37,6 +37,37 @@ switch ($action){
 		echo json_encode($data);
 
 		break;
+		
+	case 'cercar_email':
+		
+		$cadena = $_REQUEST['cadena'];
+		
+		$sql = 'SELECT
+					v_email as value,
+					id_contacto as id
+				FROM
+					contactos
+				WHERE
+					v_email LIKE "%'.$cadena.'%"';
+		
+		
+		$contactos = GestorBD::tirarSQL($sql);
+		$total     = GestorBD::totalSQL($contactos);
+		
+		$data = array();
+		
+		for ($i = 0; $i <= $total; $i++) {
+			$json = array();
+			$json['value'] = utf8_encode($contactos[$i]['value']);
+			$json['id'] = $contactos[$i]['id'];
+			$data[] = $json;
+		}
+		
+		$data['results'] = $data;
+		header("Content-type: application/json");
+		echo json_encode($data);
+		
+		break;
 
 
 
