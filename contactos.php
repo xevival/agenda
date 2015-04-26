@@ -339,7 +339,7 @@ $do = $_REQUEST['do'];
                                                             <td width="10%">
                                                                 <a href="contactos.php?do=del&id='.$c['id_contacto'].'" data-toggle="tooltip" data-placement="top" data-original-title="Borrar"><img src="img/ico/delete.gif"></a><span>&nbsp</span>
                                                                 <a href="contactos.php?do=mod&id='.$c['id_contacto'].'" data-toggle="tooltip" data-placement="top" data-original-title="Modificar"><img src="img/ico/edit.gif"></a>
-                                								<a href="contactos.php?do=send&id='.$c['id_contacto'].'"data-toggle="tooltip" data-placement="top" data-original-title="Enviar Email"><img src="img/ico/email.gif"><span>&nbsp</span>
+                                								<a href="email.php?id='.$c['id_contacto'].'"data-toggle="tooltip" data-placement="top" data-original-title="Enviar Email"><img src="img/ico/email.gif"><span>&nbsp</span>
                                                             </td>
                                                         </tr>';
 					}
