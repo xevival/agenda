@@ -62,5 +62,36 @@ class Login {
     	
     	
     }
+    
+    public static function guardarAcceso($id){
+    	 
+    	$id_usuario = Utils::filtraEntero($id);
+    	$fecha      = date('Y-m-d H:i:s');
+    	$ip 		= Utils::getRealIP();
+   
+    	 
+    	$sql = "INSERT INTO
+    			log_acceso (id_usuario, fecha_acceso,ip_acceso)
+    			VALUES ('$id_usuario', '$fecha','$ip')";
+
+    	$GLOBALS['con']->query($sql);
+    	 
+    	 
+    }
+    
+    public static function obtenerListadoAcceso(){
+    	
+    	$sql = 'SELECT
+					la.fecha_acceso,
+					la.ip_acceso,
+					u.v_username
+				FROM
+					log_acceso la
+				INNER JOIN usuarios u ON la.id_usuario = u.id_usuario
+    			ORDER By la.fecha_acceso DESC';
+    	
+    	return $listado = GestorBD::tirarSQL($sql);
+  	
+    }
 
 }
