@@ -14,7 +14,8 @@ $do = $_REQUEST['do'];
         <meta charset="UTF-8">
         <title>Agenda</title>
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-         <link rel="stylesheet" href="css/autosuggest_inquisitor.css">
+        <link rel="stylesheet" href="css/autosuggest_inquisitor.css">
+         <link rel="stylesheet" href="css/estilos.css">
         <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
         <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
